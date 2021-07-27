@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="sphere.js"> -->
+    <title>Document</title>
+</head>
+<body>
+    <style>
+   
+        body {
+        margin: 0;
+        overflow: hidden;
+        }
+    </style>
+    <canvas class="myCanvas">
+        <p>Soleil</p>
+    </canvas>
+
+   <script>
+        var canvas = document.querySelector('.myCanvas');
+        // calque les dimensions sur la fenêtre du navigateur
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+        //précise le contexte 2D
+        var ctx = canvas.getContext('2d');
+        //La variable ctx contient désormais un objet CanvasRenderingContext2D, et toutes les opérations de dessin sur le canvas impliqueront de manipuler cet objet.
+
+        // possible de reprendre le background créé sur css (même propriétés)
+        //ctx.fillStyle = 'rgb(0, 0, 0)';
+        //ctx.fillRect(0, 0, width, height);
+        
+        
+        //arc() prend six paramètres.
+        //Les deux premiers spécifient la position du centre du cercle (X et Y respectivement).//Le troisième est le rayon du cercle
+        //Le quatrième et le cinquième sont les angles de début et de fin pour dessiner l'arc (donc spécifier 0 et 360 nous donne un cercle fermé)
+        //Et le sixième paramètre définit si le cercle doit être dessiné dans le sens des aiguilles d'une montre ou dans le sens inverse (false pour le sens horaire).
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
+        ctx.fill();
+    </script>
+     
+</body>
+</html>
