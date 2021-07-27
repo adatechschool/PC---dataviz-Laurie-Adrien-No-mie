@@ -1,16 +1,28 @@
-var canvas = document.querySelector('.myCanvas');
-// calque les dimensions sur la fenêtre du navigateur
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
-//précise le contexte 2D
-var ctx = canvas.getContext('2d');
-//La variable ctx contient désormais un objet CanvasRenderingContext2D, et toutes les opérations de dessin sur le canvas impliqueront de manipuler cet objet.
 
-// possible de reprendre le background créé sur css (même propriétés)
-ctx.fillStyle = 'rgb(0, 0, 0)';
-ctx.fillRect(0, 0, width, height);
+        var canvas = document.querySelector('.myCanvas');
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+        var ctx = canvas.getContext('2d');
+        
+        function degToRad(degrees) {
+            return degrees * Math.PI / 180;
+            };
+        var radial = ctx.createRadialGradient(80,300,100,80,300,150);
+        radial.addColorStop(0,'#F2CB05'); //Jaune
+        radial.addColorStop(0.5,'#F2B705'); //Jaune
+        radial.addColorStop(1, '#F29F05'); //Rouge
+        
+       function sun (){
+        ctx.fillStyle = radial;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(100, 300, 150, degToRad(0), degToRad(360), true);
+        ctx.fill();
+       }
 
-ctx.fillStyle = 'rgb(0, 0, 255)';
-ctx.beginPath();
-ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
-ctx.fill();
+        anime({
+            targets: sun(),
+            translateX: 250,
+            duration: 3000
+          });
+       

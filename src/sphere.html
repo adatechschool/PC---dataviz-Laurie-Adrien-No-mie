@@ -4,58 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="sphere.js"> -->
+    <link rel="stylesheet"    href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <style>
-   
-        body {
-        margin: 0;
-        overflow: hidden;
-        }
-    </style>
-    <canvas class="myCanvas">
-        <p>Soleil</p>
-    </canvas>
-
-<script>
-        var canvas = document.querySelector('.myCanvas');
-        // calque les dimensions sur la fenêtre du navigateur
-        var width = canvas.width = window.innerWidth;
-        var height = canvas.height = window.innerHeight;
-        //précise le contexte 2D
-        var ctx = canvas.getContext('2d');
-        //La variable ctx contient désormais un objet CanvasRenderingContext2D, et toutes les opérations de dessin sur le canvas impliqueront de manipuler cet objet.
-        // possible de reprendre le background créé sur css (même propriétés)
-        //ctx.fillStyle = 'rgb(0, 0, 0)';
-        //ctx.fillRect(0, 0, width, height);
-        var x = canvas.width/30;
-        var y = canvas.height-300;
-        var dx =30;
-        var dy = -1;
-        //arc() prend six paramètres.
-        //Les deux premiers spécifient la position du centre du cercle (X et Y respectivement).//Le troisième est le rayon du cercle
-        //Le quatrième et le cinquième sont les angles de début et de fin pour dessiner l'arc (donc spécifier 0 et 360 nous donne un cercle fermé)
-        //Et le sixième paramètre définit si le cercle doit être dessiné dans le sens des aiguilles d'une montre ou dans le sens inverse (false pour le sens horaire).
-        function degToRad(degrees) {
-            return degrees * Math.PI / 180;
-            };
-        var radial = ctx.createRadialGradient(80,300,100,80,300,150);
-        radial.addColorStop(0,'#F2CB05'); //Jaune
-        radial.addColorStop(0.5,'#F2B705'); //Jaune
-        radial.addColorStop(1, '#F29F05'); //Rouge
-        function draw() {
-        ctx.fillStyle = radial;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        ctx.arc(x, y, 150, degToRad(0), degToRad(360), true);
-        ctx.fill();
-        x += dx;
-        y += dy;
-        }
-        setInterval(draw, 10);
-    </script>
-     
+    <figure class="dot"></figure>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+                <script type="text/javascript">
+                  var myAnimation = anime({
+                    targets: '.dot',
+                    translateX: 800,
+                    translateY:  -200,
+                     duration: 30000,
+                     easing: "linear",
+                     loop: true,
+                     }); 
+                </script>
 </body>
 </html>
