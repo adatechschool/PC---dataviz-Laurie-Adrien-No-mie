@@ -15,10 +15,18 @@
                     targets: '.dot',
                     translateX: 800,
                     translateY:  -200,
-                     duration: 30000,
+                     duration: 2700000,
                      easing: "linear",
                      loop: true,
                      }); 
-                </script>
+
+                   
+               
+                     var start = new Date();
+                     var date = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
+                     var hours = start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
+                     var minutes = start.getMinutes();
+                     console.log(minutes);
+                </script>        
 </body>
 </html>
