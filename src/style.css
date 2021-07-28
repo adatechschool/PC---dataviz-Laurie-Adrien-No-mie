@@ -4,6 +4,9 @@ body {
   }
 
 .dot {
+  position:absolute;
+  top : 800px;
+  left: -400px;
   height: 300px;
   width: 300px;
   background: linear-gradient(#f2cb05, #f29f05);
@@ -13,3 +16,139 @@ body {
 }
 
   
+#horloge {
+  position:absolute;
+  top : 800px;
+  left: 130px;
+  font-family:'digital-clock-font';
+  src: url('put_the_location_to_your_font.ttf or .otf');
+  background-color : black ;
+  color: greenyellow;
+  font-size: 40px;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+}
+
+.background {
+  color: hsl(330, 100%, 0%);
+  animation: wheelHueColor 10s infinite;
+  background-color: currentColor;
+}
+@supports (background-blend-mode: overlay) {
+  .background {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
+    animation-duration: 270s;
+  }
+@keyframes wheelHueColor {
+from, to { color: hsl(0, 0%, 0%); }
+  1%       { color: rgb(2, 0, 34); }
+  2%       { color: rgb(6, 0, 59); }
+  3%       { color: rgb(6, 0, 90); }
+  4%       { color: rgb(0, 8, 80); }
+  5%       { color: rgb(0, 1, 83); }
+  6%       { color: rgb(0, 10, 100); }                                                                                      
+  7%       { color: rgb(0, 9, 131); }                                                                                         
+  8%       { color: rgb(3, 0, 153); }                                                                                  
+  9%       { color: rgb(3, 0, 209); }                                                                              
+  10%      { color: rgb(0, 16, 241); }
+  11%      { color: hsl(216, 100%, 50%); } 
+  12%      { color: hsl(216, 100%, 56%); }
+  13%      { color: hsl(216, 100%, 62%); }                                                                                                                                                                    
+  14%      { color: hsl(216, 100%, 80%); }
+  15%      { color: hsl(216, 100%, 80%); }
+  16%      { color: hsl(216, 100%, 80%); }
+  17%      { color: hsl(216, 100%, 80%); }
+  18%      { color: hsl(216, 100%, 80%); }
+  19%      { color: hsl(216, 100%, 80%); }
+  20%      { color: hsl(216, 100%, 80%); }
+  21%      { color: hsl(216, 100%, 80%); }
+  22%      { color: hsl(216, 100%, 80%); }
+  23%      { color: hsl(216, 100%, 80%); }
+  24%      { color: hsl(216, 100%, 80%); }
+  25%      { color: hsl(216, 100%, 80%); }  
+  26%      { color: hsl(216, 100%, 80%); }
+  27%      { color: hsl(216, 100%, 80%); }
+  28%      { color: hsl(216, 100%, 80%); }
+  29%      { color: hsl(216, 100%, 80%); }
+  30%      { color: hsl(216, 100%, 80%); }
+  31%      { color: hsl(216, 100%, 80%); }
+  32%      { color: hsl(216, 100%, 80%); }
+  33%      { color: hsl(216, 100%, 80%); }
+  34%      { color: hsl(216, 100%, 80%); }
+  35%      { color: hsl(216, 100%, 80%); }
+  36%      { color: hsl(216, 100%, 80%); }
+  37%      { color: hsl(216, 100%, 80%); }
+  38%      { color: hsl(216, 100%, 80%); }
+  39%      { color: hsl(216, 100%, 80%); }
+  40%      { color: hsl(216, 100%, 80%); }
+  41%      { color: hsl(216, 100%, 80%); }
+  42%      { color: hsl(216, 100%, 80%); }
+  43%      { color: hsl(216, 100%, 80%); }
+  44%      { color: hsl(216, 100%, 80%); }
+  45%      { color: hsl(216, 100%, 80%); }
+  46%      { color: hsl(216, 100%, 80%); }
+  47%      { color: hsl(216, 100%, 80%); }
+  48%      { color: hsl(216, 100%, 80%); }
+  49%      { color: hsl(216, 100%, 80%); }
+  50%      { color: hsl(216, 100%, 80%); }
+  51%      { color: hsl(216, 100%, 62%); }
+  52%      { color: hsl(216, 100%, 56%); }
+  53%      { color: hsl(216, 100%, 50%); }
+  54%      { color: rgb(0, 16, 241); }
+  55%      { color: rgb(3, 0, 209); }
+  56%      { color: rgb(3, 0, 153); }
+  57%      { color: rgb(0, 9, 131); }
+  58%      { color: rgb(0, 10, 100); }
+  59%      { color: rgb(0, 1, 83); }
+  60%      { color: rgb(0, 8, 80); }
+  61%      { color: rgb(6, 0, 90); }
+  62%      { color: rgb(6, 0, 59); }
+  63%      { color: rgb(2, 0, 34); }
+  64%      { color: rgb(0, 0, 0); }
+  65%      { color: rgb(0, 0, 0); }
+  66%      { color: rgb(0, 0, 0); }
+  67%      { color: rgb(0, 0, 0); }
+  68%      { color: rgb(0, 0, 0); }
+  69%      { color: rgb(0, 0, 0); }
+  70%      { color: rgb(0, 0, 0); }
+  71%      { color: rgb(0, 0, 0); }
+  72%      { color: rgb(0, 0, 0); }
+  73%      { color: rgb(0, 0, 0); }
+  74%      { color: rgb(0, 0, 0); }
+  75%      { color: rgb(0, 0, 0); } 
+  76%      { color: rgb(0, 0, 0); }
+  77%      { color: rgb(0, 0, 0); }
+  78%      { color: rgb(0, 0, 0); }
+  79%      { color: rgb(0, 0, 0); }
+  80%      { color: rgb(0, 0, 0); }
+  81%      { color: rgb(0, 0, 0); }
+  82%      { color: rgb(0, 0, 0); }
+  83%      { color: rgb(0, 0, 0); }
+  84%      { color: rgb(0, 0, 0); }
+  85%      { color: rgb(0, 0, 0); }
+  86%      { color: rgb(0, 0, 0); }
+  87%      { color: rgb(0, 0, 0); }
+  88%      { color: rgb(0, 0, 0); }
+  89%      { color: rgb(0, 0, 0); }
+  90%      { color: rgb(0, 0, 0); }
+  91%      { color: rgb(0, 0, 0); }
+  92%      { color: rgb(0, 0, 0); }
+  93%      { color: rgb(0, 0, 0); }
+  94%      { color: rgb(0, 0, 0); }
+  95%      { color: rgb(0, 0, 0); }
+  96%      { color: rgb(0, 0, 0); }
+  97%      { color: rgb(0, 0, 0); }
+  98%      { color: rgb(0, 0, 0); }
+  99%      { color: rgb(0, 0, 0); }
+  100%     { color: rgb(0, 0, 0); }
+}
+
+* { margin: 0; padding: 0; }
+.background {
+  min-height: 100vh;
+  display: flex;
+}

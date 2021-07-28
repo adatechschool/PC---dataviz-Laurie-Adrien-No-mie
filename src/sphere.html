@@ -7,26 +7,52 @@
     <link rel="stylesheet"    href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <figure class="dot"></figure>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-                <script type="text/javascript">
-                  var myAnimation = anime({
-                    targets: '.dot',
-                    translateX: 800,
-                    translateY:  -200,
-                     duration: 2700000,
-                     easing: "linear",
-                     loop: true,
-                     }); 
 
-                   
-               
-                     var start = new Date();
+<body onload=showDate();>
+  
+  <div class="background">
+  </div>
+   
+  <figure class="dot"></figure>
+    <span id="horloge"></span>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script type="text/javascript">
+          var myAnimation = anime({
+              targets: '.dot',
+              translateX: window.innerWidth,
+              translateY: -200,
+              duration: 27000,
+              easing: "linear",
+              loop: true,
+          }); 
+
+                     /*var start = new Date();
                      var date = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
                      var hours = start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
                      var minutes = start.getMinutes();
-                     console.log(minutes);
-                </script>        
+                     console.log(minutes);*/
+
+
+          function refresh(){
+            var t=1000;
+            setTimeout('showDate()',t)
+          }
+
+          function showDate() {
+            var clockDate = new Date()
+            var h = clockDate.getHours();
+            var m = clockDate.getMinutes();
+            var s = clockDate.getSeconds();
+              if( h < 10 ){ h = '0' + h; }
+              if( m < 10 ){ m = '0' + m; }
+              if( s < 10 ){ s = '0' + s; }
+            var time = h + ':' + m + ':' + s
+              document.getElementById('horloge').innerHTML = time;
+              refresh()
+            }
+
+                  
+
+        </script>               
 </body>
 </html>
