@@ -17,26 +17,13 @@
     <span id="horloge"></span>  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <script type="text/javascript">
-          var myAnimation = anime({
-              targets: '.dot',
-              translateX: window.innerWidth,
-              translateY: -200,
-              duration: 27000,
-              easing: "linear",
-              loop: true,
-          }); 
-
-                     /*var start = new Date();
-                     var date = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
-                     var hours = start.getHours() + ":" + start.getMinutes() + ":" + start.getSeconds();
-                     var minutes = start.getMinutes();
-                     console.log(minutes);*/
-
-
+          
           function refresh(){
-            var t=1000;
+            var t=30000;
             setTimeout('showDate()',t)
           }
+
+          var time;
 
           function showDate() {
             var clockDate = new Date()
@@ -45,13 +32,34 @@
             var s = clockDate.getSeconds();
               if( h < 10 ){ h = '0' + h; }
               if( m < 10 ){ m = '0' + m; }
-              if( s < 10 ){ s = '0' + s; }
-            var time = h + ':' + m + ':' + s
+            time = h + ':' + m ;
               document.getElementById('horloge').innerHTML = time;
               refresh()
+              return time;
             }
+           showDate();
+           //console.log(showDate());
+           console.log(time);
 
-                  
+          function start(){
+            console.log(time);
+            if(time == "12:39") {
+              console.log(time);
+              var myAnimation = anime({
+                targets: '.dot',
+                translateX: 2500,
+                translateY: -600,
+                duration: 27000,
+                easing: "linear",
+                loop: true,
+                autoplay: true
+            }); 
+            }
+            else{
+              setInterval(start(),5000);
+            }
+          }
+          start();
 
         </script>               
 </body>

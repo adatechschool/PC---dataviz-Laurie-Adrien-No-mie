@@ -15,7 +15,6 @@ body {
   margin: 0;
 }
 
-  
 #horloge {
   position:absolute;
   top : 800px;
@@ -41,7 +40,7 @@ body {
   .background {
     background-image: linear-gradient(45deg, white 10%, black 90%);
     background-blend-mode: overlay;
-    animation-duration: 270s;
+    animation-duration: 5400s;
   }
 @keyframes wheelHueColor {
 from, to { color: hsl(0, 0%, 0%); }
