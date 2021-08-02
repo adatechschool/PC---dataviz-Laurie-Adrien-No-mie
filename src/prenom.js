@@ -7,9 +7,15 @@ var listPrenoms = [];
              return listPrenoms;  
         })
         .then(listPrenoms =>{
-          console.log(listPrenoms.records[0]);
-          for(i=0; i<listPrenoms.records.length; i++){
-            console.log(listPrenoms.records[i]);
+          for(let i=0; i<listPrenoms.records.length; i++){
+            //console.log(listPrenoms.records[i].fields.prenoms);
+            let prenoms = listPrenoms.records[i].fields.prenoms;
+            document.write(prenoms + "<br>");
+          }
+          for(let i=0; i<listPrenoms.records.length; i++){
+            //console.log(listPrenoms.records[i].fields.nombre);
+            let nombre = listPrenoms.records[i].fields.nombre;
+            document.write(nombre + "<br>");
           }
         })
         .catch((error) => {
