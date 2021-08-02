@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fetch = require("node-fetch");
+        fetch('https://opendata.paris.fr/api/records/1.0/search/?dataset=liste_des_prenoms&q=&sort=-nombre&facet=sexe&facet=annee&facet=prenoms', {mode:'no-corse'}) 
+        .then(function(response){
+            return response.json();
+        })
+        .then(data =>{
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log('rejected',error);
+        });
+    </script>
+</body>
+</html>
