@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+#containerGlobal {
+    border: 4px black solid;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8edeb;
+}
+
+#ligne {
+    /* border: 4px black solid; */
+    /* background-color: aqua; */
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.case{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px black solid; */
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+}
+
+h3{
+    font-family: 'Lobster', cursive;
+    color: rgb(24, 98, 143);
+}
+
+h4{
+    font-family: 'Hahmlet', serif;
+    font-size:90px;
+    opacity: 0%;
+    color: darkslateblue;
+    position: relative;
+    top: -25%;
+}
+
+.case.mini h3{
+    font-size: 30px;
+    position: relative;
+    top:40%;
+}
+
+/* .mini h3{
+    font-size: 44px;
+    font-weight: bold;
+} */
+
+.case.petit h3{
+    font-size: 45px;
+    position: relative;
+    top:45%;
+}
+
+.case.moyen h3 {
+    font-size: 56px;
+    position: relative;
+    top:15%;
+}
+
+.case.moyen h4 {
+    position: relative;
+    top:-10%;
+}
+.case.grand h3{
+    font-size: 58px;
+    position: relative;
+    top:45%;
+}
+
+.huge h3{
+    font-size: 70px;
+}
+
+.mini:hover h4{
+    font-size: 120px;
+    opacity: 30%;
+}
+
+.petit:hover h4{
+    font-size: 120px;
+    opacity: 30%;
+}
+
+.moyen:hover h4{
+    font-size: 120px;
+    opacity: 30%;
+}
+
+.grand:hover h4{
+    font-size: 120px;
+    opacity: 30%;
+}
+
+.huge:hover h4{
+    font-size: 120px;
+    opacity: 30%;
+}
+.mini:hover {
+    background-color:#ffd7ba;
+    
+}
+
+.petit:hover {
+    background-color: #d8e2dc;
+    }
+
+.moyen:hover {
+    background-color: #eae4e9;
+}
+
+.grand:hover {
+    background-color: #bee3db;
+}
+
+.huge:hover {
+    background-color: #b8e0d2;
+}
